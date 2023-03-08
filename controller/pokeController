@@ -1,0 +1,111 @@
+const fs = require("fs");
+
+const pokes = JSON.parse(
+  fs.readFileSync(`${__dirname}/../data/poke-simple.json`)
+);
+
+exports.checkID = (req, res, next, val) => {
+  console.log(`ID param is ${val}`);
+
+  if (req.params.id * 1 > pokes.length) {
+    return res.status(404).json({
+      status: "Failed",
+      message: "INVALID ID",
+    });
+  }
+
+  next();
+};
+exports.checkBody = (req, res, next) => {
+  if (!req.body.name || !req.body.id) {
+    return res.status(404).json({
+      status: "Failed",
+      message: "Missing name or id",
+    });
+  }
+
+  next();
+};
+exports.getAllPokemon = (req, res) => {
+  res.status(200).json({
+    status: "success",
+    result: pokes.length,
+    data: {
+      pokes,
+    },
+  });
+};
+
+exports.createPokemon = (req, res) => {
+  let newId = pokes.length + 1;
+
+  let { name, id } = req.body;
+  let newPokemon = { name, id };
+
+  pokes.push(newPokemon);
+
+  let newPokes = JSON.stringify(pokes);
+  fs.writeFile(
+    `${__dirname}/../data/poke-simple.json`,
+    newPokes,
+    "utf-8",
+    function (err) {
+      console.log("Error is ", err);
+      res.status(200).json({
+        status: "success",
+        newPokemon: {
+          newPokemon,
+        },
+      });
+    }
+  );
+};
+
+exports.getPokemon = (req, res) => {
+  const id = req.params.id;
+
+  const pokemon = pokes.filter((el) => el.id.toString() === id.toString());
+  res.status(200).json({
+    status: "success",
+    data: {
+      pokemon,
+    },
+  });
+};
+
+exports.updatePokemon = (req, res) => {
+  const id = req.params.id * 1;
+
+  let updatedData = { name: req.body.name, weight: req.body.weight, id: id };
+
+  let foundIndex = pokes.findIndex((x) => x.id == id);
+
+  pokes[foundIndex] = updatedData;
+
+  let pokemonData = JSON.stringify(pokes);
+  fs.writeFile(
+    `${__dirname}/../data/poke-simple.json`,
+    pokemonData,
+    "utf-8",
+    function (err) {
+      console.log("Error is ", err);
+      res.status(200).json({
+        status: "success",
+        updatedPokemon: {
+          updatedData,
+        },
+      });
+    }
+  );
+};
+
+exports.deletePokemon = (req, res) => {
+  const id = req.params.id;
+
+  res.status(200).json({
+    status: "success",
+    data: {
+      tour: "<Delete tour here...>",
+    },
+  });
+};

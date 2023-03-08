@@ -1,0 +1,94 @@
+[
+  {
+    "base_experience": 101,
+    "height": 3,
+    "id": 132,
+    "name": "ditto",
+    "order": 214,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg",
+    "weight": 40
+  },
+  {
+    "base_experience": 112,
+    "height": 4,
+    "id": 25,
+    "name": "pikachu",
+    "order": 35,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg",
+    "weight": 60
+  },
+  {
+    "base_experience": 62,
+    "height": 6,
+    "id": 4,
+    "name": "charmander",
+    "order": 5,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/4.png",
+    "weight": 85
+  },
+  {
+    "base_experience": 63,
+    "height": 5,
+    "id": 7,
+    "name": "squirtle",
+    "order": 10,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/7.svg",
+    "weight": 90
+  },
+  {
+    "base_experience": 64,
+    "height": 7,
+    "id": 1,
+    "name": "bulbasaur",
+    "order": 1,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg",
+    "weight": 69
+  },
+  {
+    "base_experience": 216,
+    "height": 15,
+    "held_items": [],
+    "id": 18,
+    "is_default": true,
+    "name": "pidgeot",
+    "order": 23,
+    "weight": 395
+  },
+  {
+    "base_experience": 65,
+    "height": 3,
+    "id": 133,
+    "name": "eevee",
+    "order": 215,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/133.svg",
+    "weight": 65
+  },
+  {
+    "base_experience": 65,
+    "height": 4,
+    "id": 98,
+    "name": "krabby",
+    "order": 156,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/98.svg",
+    "weight": 65
+  },
+  {
+    "base_experience": 64,
+    "height": 8,
+    "id": 54,
+    "is_default": true,
+    "name": "psyduck",
+    "order": 93,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/54.svg",
+    "weight": 196
+  },
+  {
+    "base_experience": 60,
+    "height": 6,
+    "id": 37,
+    "name": "vulpix",
+    "order": 66,
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/37.svg",
+    "weight": 99
+  }
+]
